@@ -227,7 +227,7 @@
 	И я проверяю или создаю для справочника "Users" объекты:
 		| 'Ref'                                                           | 'DeletionMark' | 'Code' | 'Description' | 'InfobaseUserID'                       | 'Partner' | 'LocalizationCode' | 'ShowInList' | 'UserGroup'                                                          | 'InterfaceLocalizationCode' | 'FormScaleVariant' | 'Description_en' | 'Description_hash' | 'Description_ru' | 'Description_tr' |
 		| 'e1cib/data/Catalog.Users?ref=b762b13668d0905011eb766bf96b2777' | 'False'        | 1      | 'Админ'       | '0d1a0eef-ac2d-4087-b83d-d967584494cc' | ''        | 'en'               | 'False'      | 'e1cib/data/Catalog.UserGroups?ref=b762b13668d0905011eb767f10805e2c' | 'en'                        | ''                 | 'Админ'          | ''                 | ''               | ''               |
-		| 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | 'False'        | 2      | 'CI'          | 'd8339fad-aa7c-4c28-9755-547bc50e2083' | ''        | 'en'               | 'True'       | 'e1cib/data/Catalog.UserGroups?ref=b762b13668d0905011eb767f10805e2c' | 'ru'                        | ''                 | 'CI'             | ''                 | ''               | ''               |
+		//| 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | 'False'        | 2      | 'CI'          | 'd8339fad-aa7c-4c28-9755-547bc50e2083' | ''        | 'en'               | 'True'       | 'e1cib/data/Catalog.UserGroups?ref=b762b13668d0905011eb767f10805e2c' | 'ru'                        | ''                 | 'CI'             | ''                 | ''               | ''               |
 
 
 
@@ -427,34 +427,34 @@
 
 
 
-//	И я проверяю или создаю для документа "PriceList" объекты:
-//		| 'Ref'                                                                | 'DeletionMark' | 'Number' | 'Date'                | 'Posted' | 'ItemType' | 'PriceListType'                       | 'PriceType'                                                          | 'Author'                                                        | 'Branch' | 'Description' |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'False'        | 1        | '24.02.2021 09:48:53' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItems'    | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb76684b9f686e' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
-//		//| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'False'        | 2        | '23.02.2021 10:12:31' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItemKeys' | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb76684b9f6866' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
-//		//| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'False'        | 3        | '24.02.2021 12:50:42' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItemKeys' | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb767f10805e2a' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
-//
-//	И я перезаполняю для объекта табличную часть "ItemList":
-//		| 'Ref'                                                                | 'Item'                                                          | 'Price' | 'InputUnit' | 'InputPrice' |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb76684b9f687d' | 110     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b2750' | 150     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b2754' | 320     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b275a' | 400     | ''          |              |
-//
-//	И я перезаполняю для объекта табличную часть "ItemKeyList":
-//		| 'Ref'                                                                | 'Key'                                  | 'ItemKey'                                                          | 'Price' | 'InputUnit' | 'InputPrice' |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '3cd8d023-ad85-4a35-8bff-3847fa92ccd8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb76684b9f687e' | 190     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'e592810d-f3a2-4f12-9353-9916031825cc' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b274f' | 200     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'c2e62852-cd5e-4d84-b8b4-3ec7ee04d4d9' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2757' | 210     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '2aa56aee-fac8-408a-8a7a-4b3f979814d8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2751' | 450     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'e3ee9bce-4b58-4474-a061-4d9790f7d016' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b275c' | 250     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '93bea27c-b3cd-4e2c-8121-0053073c2535' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2759' | 190     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '3cd8d023-ad85-4a35-8bff-3847fa92ccd8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb76684b9f687e' | 250     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'e592810d-f3a2-4f12-9353-9916031825cc' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b274f' | 210     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'c2e62852-cd5e-4d84-b8b4-3ec7ee04d4d9' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2757' | 220     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '2aa56aee-fac8-408a-8a7a-4b3f979814d8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2751' | 490     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'e3ee9bce-4b58-4474-a061-4d9790f7d016' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b275c' | 270     | ''          |              |
-//		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '93bea27c-b3cd-4e2c-8121-0053073c2535' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2759' | 220     | ''          |              |
-//
+	И я проверяю или создаю для документа "PriceList" объекты:
+		| 'Ref'                                                                | 'DeletionMark' | 'Number' | 'Date'                | 'Posted' | 'ItemType' | 'PriceListType'                       | 'PriceType'                                                          | 'Author'                                                        | 'Branch' | 'Description' |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'False'        | 1        | '24.02.2021 09:48:53' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItems'    | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb76684b9f686e' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'False'        | 2        | '23.02.2021 10:12:31' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItemKeys' | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb76684b9f6866' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'False'        | 3        | '24.02.2021 12:50:42' | 'True'   | ''         | 'Enum.PriceListTypes.PriceByItemKeys' | 'e1cib/data/Catalog.PriceTypes?ref=b762b13668d0905011eb767f10805e2a' | 'e1cib/data/Catalog.Users?ref=aa7f120ed92fbced11eb13d7279770c0' | ''       | ''            |
+
+	И я перезаполняю для объекта табличную часть "ItemList":
+		| 'Ref'                                                                | 'Item'                                                          | 'Price' | 'InputUnit' | 'InputPrice' |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb76684b9f687d' | 110     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b2750' | 150     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b2754' | 320     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a25' | 'e1cib/data/Catalog.Items?ref=b762b13668d0905011eb766bf96b275a' | 400     | ''          |              |
+
+	И я перезаполняю для объекта табличную часть "ItemKeyList":
+		| 'Ref'                                                                | 'Key'                                  | 'ItemKey'                                                          | 'Price' | 'InputUnit' | 'InputPrice' |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '3cd8d023-ad85-4a35-8bff-3847fa92ccd8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb76684b9f687e' | 190     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'e592810d-f3a2-4f12-9353-9916031825cc' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b274f' | 200     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'c2e62852-cd5e-4d84-b8b4-3ec7ee04d4d9' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2757' | 210     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '2aa56aee-fac8-408a-8a7a-4b3f979814d8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2751' | 450     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | 'e3ee9bce-4b58-4474-a061-4d9790f7d016' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b275c' | 250     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb7674324a4a2d' | '93bea27c-b3cd-4e2c-8121-0053073c2535' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2759' | 190     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '3cd8d023-ad85-4a35-8bff-3847fa92ccd8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb76684b9f687e' | 250     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'e592810d-f3a2-4f12-9353-9916031825cc' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b274f' | 210     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'c2e62852-cd5e-4d84-b8b4-3ec7ee04d4d9' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2757' | 220     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '2aa56aee-fac8-408a-8a7a-4b3f979814d8' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2751' | 490     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | 'e3ee9bce-4b58-4474-a061-4d9790f7d016' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b275c' | 270     | ''          |              |
+		| 'e1cib/data/Document.PriceList?ref=b762b13668d0905011eb767f10805e2d' | '93bea27c-b3cd-4e2c-8121-0053073c2535' | 'e1cib/data/Catalog.ItemKeys?ref=b762b13668d0905011eb766bf96b2759' | 220     | ''          |              |
+
 
 
 	И я проверяю или создаю для плана видов характеристик "CurrencyMovementType" объекты:
